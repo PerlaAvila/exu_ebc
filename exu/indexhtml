@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Pasaporte EXU</title>
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body>
+
+        <header>
+            <div class="logo">
+                <div class="contenido-logo">
+                    <img src="http://www.ebc.mx/imagenes/logo.png" alt="Logo EBC">
+                </div>
+            </div>
+
+            <div class="contenido-principal">
+                <h1>PASAPORTE EXU</h1>
+                <p class="proximamente">próximamente</p>
+                <div class="logo-info">
+                    <div class="logo-exu">
+                        <img src="img/logo-exu.png" alt="Logo Extención Universitaria">
+                    </div>
+                    <div class="line"></div>
+                    <p class="coordinador">Para mayor información <br>acércate a tu <br>Coordinador EXU</p>
+                </div>
+            </div>
+
+
+        </header>
+
+        <footer class="pie-pagina">
+            <div class="contenedor">
+                <div class="texto-footer">
+                    <p class="contenido-footer">Escuela Bancaria y Comercial, S.C. Derechos Reservados 2018</p>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

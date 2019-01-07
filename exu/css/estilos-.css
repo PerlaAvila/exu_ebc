@@ -1,0 +1,547 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: helvetica, sans-serif;
+    background: #f2f2f2;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+    height: 80vh;
+}
+
+p, h2, h3, h4{
+    color: #424242;
+}
+
+/* CONTENIDO BARRA DE NAVEGACIÓN */
+
+.navegador-principal{
+    background: #0094d4;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+
+.logo-ebc{
+    width: 150px;
+    margin: 10px 0;
+}
+
+.logo-ebc img{
+    width: 100%;
+    vertical-align: top;
+}
+
+.menu-principal{
+    transition: all .4s ease;
+}
+
+.acerca-de{
+	cursor: pointer;
+}
+
+.barra-navegacion{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.barra-navegacion a{
+    text-decoration: none;
+    color: #fff;
+    padding: 19px 10px;
+    font-weight: normal;
+    transition: all .4s ease;
+}
+
+.barra-navegacion a:hover{
+    background: #066384;
+}
+
+.scroll{
+	height:100vh;
+	overflow-y: hidden;
+}
+
+/* MENU HAMBURGER */
+
+.menu-colapse{
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-colapse span{
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #ffffff;
+    top: calc(50%);
+    right: calc(10% - 22px);
+    transition: all .4s ease;
+}
+
+.menu-colapse span:nth-child(1){
+    transform: translateY(-10px);
+}
+
+.menu-colapse span:nth-child(3){
+    transform: translateY(10px);
+}
+
+.menu-colapse.active span:nth-child(1){
+    transform: translateY(0px) rotate(140deg);
+}
+
+.menu-colapse.active span:nth-child(2){
+    transform: translateX(1000%);
+    opacity: 0;
+}
+
+.menu-colapse.active span:nth-child(3){
+    transform: translateY(0px) rotate(-140deg);
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.contenedor-cont-principal{
+    position: absolute;
+    top: 48vh;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.logo-exu{
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: -58px;
+}
+
+.logo-exu img{
+    width: 100%;
+    vertical-align: top;
+}
+
+.cont-descripcion-exu{
+    border: 2px solid #ea1b4b;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.descripcion-exu{
+    font-size: 24px;
+    padding: 80px 20px 50px 20px;
+    text-align: center;
+    color: #424242;
+	width: 950px;
+}
+
+.arrow{
+    text-align: center;
+    width: 100%;
+    padding-top: 65px;
+}
+
+.glyphicons-chevron-down{
+	color: #ea1b4b;
+	font-size: 30px;
+	animation: flecha 2s infinite;
+}
+
+@keyframes flecha {
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+	}
+
+    100%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
+
+
+/* WIDGET */
+
+.contenidos-eventos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+	margin-top: 120px;
+}
+
+.widget{
+    background: #ffffff;
+    border-radius: 20px;
+    width: 24%;
+    min-width: 280px;
+    margin-bottom: 40px;
+}
+
+.campus{
+    background: #0094d4;
+    border-radius: 20px 20px 0 0;
+}
+
+.campus h3{
+    color: #ffffff;
+    padding: 10px 15px;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.imagenes-eventos{
+    width: 100%;
+	height: 180px;
+    overflow: hidden;
+}
+
+.imagenes-eventos.catapulta::before{
+	content: url(../eventos-campus/imagenes/catapulta.png);
+	position: absolute;
+	margin-top: 122px;
+	margin-left: 236px;
+}
+
+.imagenes-eventos.deporte::before{
+	content: url(../eventos-campus/imagenes/deporte.png);
+	position: absolute;
+	margin-top: 122px;
+	margin-left: 236px;
+}
+
+.imagenes-eventos.cultura::before{
+	content: url(../eventos-campus/imagenes/cultura.png);
+	position: absolute;
+	margin-top: 122px;
+	margin-left: 236px;
+}
+
+.imagenes-eventos.taller-exu::before{
+	content: url(../eventos-campus/imagenes/taller-exu.png);
+	position: absolute;
+	margin-top: 122px;
+	margin-left: 236px;
+}
+
+.imagenes-eventos.r-social::before{
+	content: url(../eventos-campus/imagenes/r-social.png);
+	position: absolute;
+	margin-top: 122px;
+	margin-left: 236px;
+}
+
+.imagenes-eventos.vinculacion::before{
+	content: url(../eventos-campus/imagenes/vinculacion.png);
+	position: absolute;
+	margin-top: 122px;
+	margin-left: 236px;
+}
+
+.bloque-fecha-hora{
+	height: 135px;
+}
+
+.imagenes-eventos img{
+    width: 100%;
+    vertical-align: top;
+}
+
+.titulo-evento{
+    padding: 10px;
+    height: 250px !important;
+    overflow: hidden;
+}
+
+.titulo-evento h4{
+    margin: 10px 0;
+    color: #424242;
+}
+
+.descripcion-texto{
+    text-align: left;
+    color: #424242;
+}
+
+.glyphicons-map-marker, .glyphicons-calendar, .glyphicons-clock{
+	color: #ea1b4b;
+}
+
+.ubicacion, .fecha, .hora{
+	line-height: 20px;
+	padding: 6px 0;
+}
+
+.ubicacion-fecha{
+    padding: 10px 0;
+}
+
+.contenido-ubicacion, .contenido-fecha, .contenido-hora{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    color: #424242;
+}
+
+				/* VENTANA MODAL */
+				
+				.map1{
+					cursor:pointer;
+				}
+				
+				.mapGrande{
+					height: 100vh;
+					width: 100%;
+					background: rgba(0, 0, 0, 0.8);
+					position:fixed;
+					top: 0;
+					left: 0;
+					display: none;
+					z-index:5;
+					overflow:hidden
+				}
+				
+				.mapGrande .contenido-map-modal{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+				}
+				
+				.close{
+					height: 40px;
+					width: 45px;
+					position: absolute;
+					top: 7px;
+					right: -4px;
+				}
+				
+				.close:hover{
+					cursor: pointer;
+				}
+				
+				.linea{
+					height: 21px;
+					width: 4px;
+					background: black;
+					border-radius: 10px;
+					transform: rotate(45deg);
+					margin-left: 20px;
+				}
+				
+				.linea::before{
+					content: '';
+					height: 21px;
+					width: 4px;
+					background: black;
+					border-radius: 10px;
+					transform: rotate(-90deg);
+					position: absolute;
+				}
+				
+				.scroll-stop{
+					height:100vh;
+					overflow:hidden;
+				}
+				
+				/* CONTENIDO VENTAN MODAL */
+				
+				.contenido-map-modal{
+					background-color:#fff;
+					width: 60%;
+					height: 60vh;
+				}
+				
+				.map{
+					width:100%;
+					height:57vh;
+				}
+				
+				#mapa iframe{
+					width:100% !important;
+					height:100% !important;
+				}
+				
+				.modal-map{
+					margin:10px;
+					display:flex;
+					flex-direction:row;
+					flex-wrap:wrap;
+					justify-content:space-around;
+					align-items:center;
+				}
+				
+				/* FIN CONTENIDO VENTANA MODAL */
+				
+				/* FIN VENTANA MODAL */
+
+.boton-evento{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.boton-evento a{
+    padding: 15px 30px;
+    color: #ffffff;
+    background: #ea1b4b;
+    text-decoration: none;
+    border-radius: 30px;
+    display:inline-block;
+    transition: all .4s ease;
+    font-size: 14px;
+}
+
+.boton-evento a:hover{
+    background: #b70d39;
+}
+
+/* CONTENIDO DESCRIPCIÓN DEL PASAPORTE EXU */
+
+.pasaporte-exu-contenidos{
+    margin: 100px auto;
+}
+
+.pasaporte-exu-contenidos h2{
+    text-align: center;
+}
+
+.line{
+    width: 60px;
+    height: 4px;
+    background: #424242;
+    margin: 5px auto;
+    margin-bottom: 50px;
+}
+
+.descripcion-pasaporte-exu{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.descripcion-pasaporte-exu p{
+    margin: 20px 0;
+}
+
+.principios-institucionales{
+    margin-left: 30px;
+}
+
+.erratas{
+	font-size:10px;
+	padding:20px;
+}
+
+/* PIE DE PÁGINA */
+
+footer{
+    width: 100%;
+    background: #424242;
+}
+
+.footer{
+    color: #ffffff;
+    font-size: 12px;
+    padding: 30px;
+    text-align: center;
+}
+
+
+/*******************************************************************************
+******************************* RESPONSIVE *************************************
+*******************************************************************************/
+
+
+@media only screen and (max-width: 992px) {
+
+    /* MENU HAMBURGER */
+
+    .menu-principal{
+        position: absolute;
+        right: -150%;
+        top: 0;
+    }
+
+    .menu-principal a{
+        display: block;
+        width: 100%;
+    }
+
+    .menu-principal.active{
+        width: 100%;
+        right: 0;
+        top: 56px;
+        background: #0094d4;
+    }
+
+    .menu-principal.active a{
+        text-align: center;
+    }
+
+    .menu-colapse{
+        display: block;
+    }
+
+    /* CONTENIDO EXU */
+
+    .logo-exu {
+        width: 150px;
+    }
+
+    .contenedor-cont-principal {
+        width: 90%;
+    }
+
+    .descripcion-exu {
+        font-size: 18px;
+		width: 100%;
+    }
+
+    .arrow {
+        padding-top: 45px;
+    }
+	
+	/* CONTENIDO VENTAN MODAL */
+				
+				.contenido-map-modal{
+					background-color:#fff;
+					width: 90%;
+					height: 60vh;
+				}
+	
+}
+
+
+@media only screen and (max-width: 500px){
+	
+	.contenedor-cont-principal{
+		position: absolute;
+		top: 75vh;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	
+	.contenidos-eventos {
+		margin-top: 330px;
+	}
+}
+
+
+

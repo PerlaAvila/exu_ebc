@@ -1,0 +1,587 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: helvetica, sans-serif;
+    background: #f2f2f2;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+}
+
+p, h2, h3, h4{
+    color: #424242;
+}
+
+/* CONTENIDO BARRA DE NAVEGACIÓN */
+
+.navegador-principal{
+    background: #0094d4;
+    width: 100%;
+	position: fixed;
+	z-index: 1000;
+}
+
+.logo-ebc{
+    width: 150px;
+    margin: 10px 0;
+}
+
+.logo-ebc img{
+    width: 100%;
+    vertical-align: top;
+}
+
+.menu-principal{
+    transition: all .4s ease;
+}
+
+.barra-navegacion{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.barra-navegacion a{
+    text-decoration: none;
+    color: #fff;
+    padding: 19px 10px;
+    font-weight: normal;
+    transition: all .4s ease;
+}
+.barra-navegacion a:hover{
+    background: #066384;
+}
+
+#menu-campus-responsive{
+	display: none;
+}
+
+.navegacion-secundaria.ocultar{
+	display:none;
+}
+
+.scroll{
+	overflow: hidden;
+}
+
+/* MENU HAMBURGER */
+
+.menu-colapse{
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-colapse span{
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #ffffff;
+    top: calc(50%);
+    right: calc(10% - 22px);
+    transition: all .4s ease;
+}
+
+.menu-colapse span:nth-child(1){
+    transform: translateY(-10px);
+}
+
+.menu-colapse span:nth-child(3){
+    transform: translateY(10px);
+}
+
+.menu-colapse.active span:nth-child(1){
+    transform: translateY(0px) rotate(140deg);
+}
+
+.menu-colapse.active span:nth-child(2){
+    transform: translateX(1000%);
+    opacity: 0;
+}
+
+.menu-colapse.active span:nth-child(3){
+    transform: translateY(0px) rotate(-140deg);
+}
+
+/* CONTENIDO BARRA LATERAL EVENTOS */
+
+.contenido-barra-eventos{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+	margin-top: 60px;
+}
+
+.barra-lateral{
+    width: 20%;
+}
+
+.contenido-ubicacion-barra{
+    margin: 25px 0 50px 0;
+}
+
+.ubicacion-campus{
+    width: 100%;
+    margin: 20px 0;
+}
+
+.contenido-map-campus{
+	padding: 40px 20px;
+}
+
+.contenido-map-campus p{
+	margin:10px 0;
+	font-size:12px
+}
+
+.ubicacion-campus h3{
+    font-size: 16px;
+}
+
+.map-campus{
+    background: #ffffff;
+    width: 100%;
+    height: 200px;
+}
+
+.titulo-campus-barra{
+    margin-bottom: 20px;
+}
+
+.titulo-campus-barra h3{
+    font-size: 16px;
+	margin-top: 20px;
+}
+
+.navegacion-secundaria{
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+}
+
+.navegacion-secundaria a{
+    text-decoration: none;
+    color: #424242;
+    font-size: 12px;
+    padding: 12px 25px;
+    border-bottom: 1px solid #424242;
+	line-height: 26px;
+    transition: all .4s ease;
+}
+
+.glyphicons-chevron-right{
+	float:right;
+}
+
+.navegacion-secundaria a:nth-child(11){
+    border-bottom: none;
+}
+
+.navegacion-secundaria a:hover{
+    background: #ccc;
+	cursor:pointer;
+}
+
+.seccion-evento-derecha{
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.titulo-seccion-campus{
+    margin: 50px 0;
+}
+
+/* WIDGET */
+
+.contenidos-eventos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.widget{
+    background: #ffffff;
+    border-radius: 20px;
+    width: 24%;
+    min-width: 280px;
+    margin-bottom: 40px;
+}
+
+.campus{
+    background: #0094d4;
+    border-radius: 20px 20px 0 0;
+}
+
+.campus h3{
+    color: #ffffff;
+    padding: 10px 15px;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+
+.imagenes-eventos{
+    width: 100%;
+	height: 180px;
+    overflow: hidden;
+}
+
+.imagenes-eventos.catapulta::before{
+	content: url(../eventos-campus/imagenes/catapulta.png);
+	position: absolute;
+	margin-top: 122px;
+	margin-left: 224px;
+}
+
+.imagenes-eventos.deporte::before{
+	content: url(../eventos-campus/imagenes/deporte.png);
+	position: absolute;
+	margin-top: 122px;
+	margin-left: 224px;
+}
+
+.imagenes-eventos.cultura::before{
+	content: url(../eventos-campus/imagenes/cultura.png);
+	position: absolute;
+	margin-top: 122px;
+	margin-left: 224px;
+}
+
+.imagenes-eventos.taller-exu::before{
+	content: url(../eventos-campus/imagenes/taller-exu.png);
+	position: absolute;
+	margin-top: 122px;
+	margin-left: 224px;
+}
+
+.imagenes-eventos.r-social::before{
+	content: url(../eventos-campus/imagenes/r-social.png);
+	position: absolute;
+	margin-top: 122px;
+	margin-left: 224px;
+}
+
+.imagenes-eventos.vinculacion::before{
+	content: url(../eventos-campus/imagenes/vinculacion.png);
+	position: absolute;
+	margin-top: 122px;
+	margin-left: 224px;
+}
+
+.imagenes-eventos img{
+    width: 100%;
+    vertical-align: top;
+}
+
+.titulo-evento{
+    padding: 10px;
+	height: 250px !important;
+	overflow: hidden;
+}
+
+.titulo-evento h4{
+    margin: 10px 0;
+    color: #424242;
+}
+
+.descripcion-texto{
+    text-align: left;
+    color: #424242;
+}
+
+.glyphicons-map-marker, .glyphicons-calendar, .glyphicons-clock{
+	color: #ea1b4b;
+}
+
+.ubicacion, .fecha, .hora{
+	padding: 6px 0;
+    line-height: 20px;
+}
+
+.ubicacion-fecha{
+    padding: 10px 0;
+}
+
+.contenido-ubicacion, .contenido-fecha, .contenido-hora{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    color: #424242;
+}
+
+.ubicacion-fecha{
+    padding: 10px 0;
+}
+
+/* VENTANA MODAL */
+				
+				.map1{
+					cursor:pointer;
+				}
+				
+				.mapGrande{
+					height: 100vh;
+					width: 100%;
+					background: rgba(0, 0, 0, 0.8);
+					position:fixed;
+					top: 0;
+					left: 0;
+					display: none;
+					z-index:5;
+					overflow:hidden
+				}
+				
+				.mapGrande .contenido-map-modal{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+				}
+				
+				.close{
+					height: 40px;
+					width: 45px;
+					position: absolute;
+					top: 7px;
+					right: -4px;
+				}
+				
+				.close:hover{
+					cursor: pointer;
+				}
+				
+				.linea{
+					height: 21px;
+					width: 4px;
+					background: black;
+					border-radius: 10px;
+					transform: rotate(45deg);
+					margin-left: 20px;
+				}
+				
+				.linea::before{
+					content: '';
+					height: 21px;
+					width: 4px;
+					background: black;
+					border-radius: 10px;
+					transform: rotate(-90deg);
+					position: absolute;
+				}
+				
+				.scroll-stop{
+					height:100vh;
+					overflow:hidden;
+				}
+				
+				/* CONTENIDO VENTAN MODAL */
+				
+				.contenido-map-modal{
+					background-color:#fff;
+					width: 60%;
+					height: 60vh;
+				}
+				
+				.map{
+					width:100%;
+					height:57vh;
+				}
+				
+				#mapa iframe{
+					width:100% !important;
+					height:100% !important;
+				}
+				
+				.modal-map{
+					margin:10px;
+					display:flex;
+					flex-direction:row;
+					flex-wrap:wrap;
+					justify-content:space-around;
+					align-items:center;
+				}
+				
+				/* FIN CONTENIDO VENTANA MODAL */
+				
+				/* FIN VENTANA MODAL */
+
+.contenido-ubicacion, .contenido-fecha{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    color: #424242;
+}
+.boton-evento{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.boton-evento a{
+    padding: 15px 30px;
+    color: #ffffff;
+    background: #ea1b4b;
+    text-decoration: none;
+    border-radius: 30px;
+    display:inline-block;
+    transition: all .4s ease;
+    font-size: 14px;
+}
+
+.boton-evento a:hover{
+    background: #b70d39;
+}
+
+
+/* MENU PAGINACIÓN */
+
+.numeracion{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    float: right;
+    margin: 20px 0 50px 0;
+}
+
+.menu-paginacion{
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+.menu-paginacion a:nth-child(5){
+    border: none;
+}
+
+.numeracion a{
+    padding: 10px;
+    border-right: 1px solid #424242;
+    text-decoration: none;
+    display: inline-block;
+    color: #424242;
+    font-size: 14px;
+    transition: all .4s ease;
+}
+
+.cambio-pagina-left{
+    background: #ffffff;
+    margin-right: 20px;
+    border-right: 0 !important;
+    border-radius: 5px;
+}
+
+.cambio-pagina-right{
+    background: #ffffff;
+    margin-left: 20px;
+    border-right: 0 !important;
+    border-radius: 5px;
+}
+
+.numeracion a:hover{
+    color: #ea1b4b;
+}
+
+/* PIE DE PÁGINA */
+
+footer{
+    width: 100%;
+    background: #424242;
+}
+
+.footer{
+    color: #ffffff;
+    font-size: 12px;
+    padding: 30px;
+    text-align: center;
+}
+
+/*******************************************************************************
+******************************* RESPONSIVE *************************************
+*******************************************************************************/
+
+@media only screen and (max-width: 992px) {
+
+    /* MENU HAMBURGER */
+
+    .menu-principal{
+        position: absolute;
+        right: -550%;
+        top: 0;
+		overflow-y:scroll;
+    }
+
+    .menu-principal a{
+        display: block;
+        width: 100%;
+    }
+
+    .menu-principal.active{
+        width: 100%;
+        right: 0;
+        top: 56px;
+        background: #0094d4;
+    }
+
+    .menu-principal.active a{
+        text-align: center;
+    }
+
+    .menu-colapse{
+        display: block;
+    }
+	
+	/* BARRA LATERAL */
+	
+	.barra-lateral{
+		display:none;
+	}
+	
+	.navegacion-secundaria.ocultar{
+		display:flex;
+		flex-direction:row;
+		flex-wrap:wrap;
+		justify-content: center;
+	}
+	
+	.navegacion-secundaria.ocultar a{
+		width: 150px;
+		display: block;
+	}
+	
+	#menu-campus-responsive{
+		display: block;
+		cursor:pointer;
+	}
+	
+	/* SECCIÓN EVENTOS */
+	
+	.seccion-evento-derecha{
+		width:100%;
+	}
+	
+	/* CONTENIDO VENTAN MODAL */
+				
+				.contenido-map-modal{
+					background-color:#fff;
+					width: 90%;
+					height: 60vh;
+				}
+}
